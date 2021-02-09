@@ -1,0 +1,16 @@
+#!/usr/bin/php
+<?php
+
+if (php_sapi_name() !== 'cli') {
+    exit;
+}
+
+require ('./vendor/autoload.php');
+require('./src/FizzBuzz/fizzbuzz.php');
+require('./tests/FizzBuzz/test.php');
+
+use FizzBuzz\App1;
+
+$fizzbuzz = new App1();
+$fizzbuzz->stepOne('s');
+$fizzbuzz->stepOne(20);
